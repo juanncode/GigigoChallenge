@@ -1,0 +1,23 @@
+<resources>
+    <!--
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=A6:50:EC:6B:2F:A7:E6:A2:ED:3F:91:DF:22:D6:55:3A:E5:A0:F8:8A%3Bcom.gitlab.juancode.gigigochallenge
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.gitlab.juancode.gigigochallenge
+
+    SHA-1 certificate fingerprint:
+    A6:50:EC:6B:2F:A7:E6:A2:ED:3F:91:DF:22:D6:55:3A:E5:A0:F8:8A
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCGVMxXh4H3nPIlBL-J7Z0ot9a_b_KkWmE</string>
+</resources>

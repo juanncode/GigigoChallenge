@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "441360427067",
+    "project_id": "gigigochallenge",
+    "storage_bucket": "gigigochallenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441360427067:android:923d426e7e19495022941e",
+        "android_client_info": {
+          "package_name": "com.gitlab.juancode.gigigochallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441360427067-c41ov2p327agqeompu8hoabv8uf74rrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWobLsDhxB_VQHVfZBct310j5baSAorjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441360427067-c41ov2p327agqeompu8hoabv8uf74rrn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
