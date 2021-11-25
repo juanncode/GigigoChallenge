@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
     private var nameDestinyMarker = ""
     private var latLngDestiny: LatLng? = null
     private var latLngOrigin: LatLng? = null
+    private var distanceAndTime = Pair("", "")
 
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
@@ -111,6 +112,10 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
                 )
             }
         })
+        viewModel.distanceAndTimeLive.observe(this, {
+            distanceAndTime = it
+        })
+
         viewModel.dataDirectionsLive.observe(this, {
             paintPolyline(it)
         })
@@ -226,7 +231,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         if (marker.title.toString() == nameDestinyMarker) {
             val builder = AlertDialog.Builder(this)
             builder.setTitle(nameDestinyMarker)
-            builder.setMessage("Latitud: ${marker.position.latitude}, Longitud: ${marker.position.longitude}")
+            builder.setMessage("Latitud: ${marker.position.latitude}\nLongitud: ${marker.position.longitude}\nDistancia: ${distanceAndTime.first}\nTiempo: ${distanceAndTime.second}")
             builder.show()
         }
         return true

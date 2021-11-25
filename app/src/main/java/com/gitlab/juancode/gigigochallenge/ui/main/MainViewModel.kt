@@ -23,6 +23,9 @@ class MainViewModel : ViewModel() {
     private val _dataDirectionsLive = MutableLiveData<List<LatLng>>()
     val dataDirectionsLive: LiveData<List<LatLng>> get() = _dataDirectionsLive
 
+    private val _distanceAndTimeLive = MutableLiveData<Pair<String, String>>()
+    val distanceAndTimeLive: LiveData<Pair<String, String>> get() = _distanceAndTimeLive
+
     init {
         loadPermission()
     }
@@ -45,7 +48,7 @@ class MainViewModel : ViewModel() {
                 origin = "${origin.latitude},${origin.longitude}",
                 destiny = "${destiny.latitude},${destiny.longitude}"
             )
-
+            _distanceAndTimeLive.value = Pair(response.routes[0].legs[0].distance.text,response.routes[0].legs[0].duration.text )
             val steps = response.routes[0].legs[0].steps
             steps.forEach { step ->
                 listSteps.add(LatLng(step.start_location.lat, step.start_location.lng))
